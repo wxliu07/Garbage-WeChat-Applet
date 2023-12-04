@@ -1,0 +1,73 @@
+<view class="answer-home">
+  <view class="bg" style="position: absolute; left: -1rpx; top: 0rpx; width: 750rpx; height: 340rpx; display: block; box-sizing: border-box"></view>
+  <block wx:if="{{isLogin}}">
+    <view class="user-body" style="width: 598rpx; height: 340rpx; display: flex; box-sizing: border-box; left: -2rpx; top: -36rpx; position: relative">
+      <view class="user-portrait">
+        <image class="logo-img" src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="user-info">
+        <view class="user-name info-item">
+          <view class="key">姓名：</view>
+          <view class="value">
+            <block wx:if="{{userIndex!==-1}}">
+              {{userInfo.nickName}}
+            </block>
+            <block wx:else>
+              暂无名称
+            </block>
+          </view>
+        </view>
+        <view class="user-ranking info-item">
+          <view class="key">排名：</view>
+          <view class="value">
+            <block wx:if="{{userIndex!==-1}}">
+              {{userIndex}}
+            </block>
+            <block wx:else>
+              暂无排名
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class="answer-menu" style="width: 750rpx; height: 560rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+      <view class="menu-item" bindtap="toAnswer" data-page="answer-run" style="width: 280rpx; height: 230rpx; display: flex; box-sizing: border-box; position: relative; left: 30rpx; top: -88rpx">
+        <view class="item-img">
+          <text class="my-iconfont icon-dati"></text>
+        </view>
+        <view class="item-text">
+          <text>答题</text>
+        </view>
+      </view>
+      <view class="menu-item" bindtap="toAnswer" data-page="answer-ranking" style="width: 280rpx; height: 230rpx; display: flex; box-sizing: border-box; position: relative; left: -29rpx; top: -88rpx">
+        <view class="item-img">
+          <text class="my-iconfont icon-paiming"></text>
+        </view>
+        <view class="item-text">
+          <text>排名</text>
+        </view>
+      </view>
+      <view class="menu-item" bindtap="toAnswer" data-page="answer-history" style="width: 280rpx; height: 230rpx; display: flex; box-sizing: border-box; position: relative; left: 30rpx; top: -78rpx">
+        <view class="item-img">
+          <text class="my-iconfont icon-cuotijiexi"></text>
+        </view>
+        <view class="item-text">
+          <text>答题历史</text>
+        </view>
+      </view>
+      <view class="menu-item" bindtap="goWrongList" style="width: 280rpx; height: 230rpx; display: flex; box-sizing: border-box; position: relative; left: -29rpx; top: -78rpx">
+        <view class="item-img">
+          <text class="my-iconfont icon-cuotijiexi"></text>
+        </view>
+        <view class="item-text">
+          <text>错题</text>
+        </view>
+      </view>
+      <!-- <view class="round round-one"></view>
+      <view class="round round-two"></view>
+      <view class="round round-three"></view> -->
+    </view>
+  </block>
+</view>

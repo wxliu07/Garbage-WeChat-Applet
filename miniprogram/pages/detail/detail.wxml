@@ -1,0 +1,15 @@
+<view class="container">
+  <scroll-view class='content' scroll-y="{{true}}" style="width: 638rpx; height: 1110rpx; display: block; box-sizing: border-box">
+    <view class='title' style="width: 578rpx; height: -32rpx; display: block; box-sizing: border-box">{{category.title}}</view>
+    <image class="c_image" src='{{category.src}}' mode="widthFix" style="width: 216rpx; height: 306rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
+    <text class='sm_title' style="width: 578rpx; height: 54rpx; display: flex; box-sizing: border-box">简介</text>
+    <text class='desc'>{{category.info}}</text>
+    <text class='sm_title' style="width: 578rpx; height: 54rpx; display: flex; box-sizing: border-box">投放指导</text>
+    <text class='sm_remark'>{{category.guidance}}</text>
+  </scroll-view>
+</view>
+<view class='share_btn'>
+  <image src='../../static/image/guide_tag.png' mode="widthFix"></image>
+  <text>分享</text>
+</view>
+<button open-type='share' class='share_btyn' style="position: fixed; left: 383rpx; top: 1037rpx"></button>

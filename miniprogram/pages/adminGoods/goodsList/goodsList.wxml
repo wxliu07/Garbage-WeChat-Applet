@@ -6,7 +6,7 @@
 <view class="addBtn cuIcon-add" bindtap="addBtnHandle"></view>
 
 
-
+<!-- 是否展示 -->
 <view class="cu-modal {{showInfo?'show':''}}">
   <view class="cu-dialog">
     <view class="item-content">

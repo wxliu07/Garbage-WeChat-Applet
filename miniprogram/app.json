@@ -79,7 +79,7 @@
       },
       {
         "pagePath": "pages/adminList/adminList",
-        "text": "管理员",
+        "text": "管理",
         "iconPath": "/static/image/admin.png",
         "selectedIconPath": "/static/image/admin_action.png"
       }
